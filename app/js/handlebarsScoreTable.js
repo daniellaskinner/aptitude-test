@@ -20,23 +20,27 @@ async function sortUsersObjectByDate() {
  * with user objects and send this to searching and filtering.
  */
 function updateScoreTable() {
-    let users = sortUsersObjectByDate()
+    let users = sortUsersObjectByDate();
     users.then(function (userInfo) {
         getTemplateAjax('js/templates/adminTable.hbs').then(function (HBTemplate) {
-            sendToSearchAndFilter(HBTemplate, userInfo)
-        })
-    })
+            let filteredUserArray = searchAndFilter(userInfo.data);
+            let paginatedArrays = splitArray(filteredUserArray, 20);
+            printFilteredResultsToScreen(HBTemplate, paginatedArrays[0]);
+            displayPageBtns(paginatedArrays);
+        });
+    });
 }
 
 /**
- * Transforms and sends the user info to the search and filtering function
+ * Takes the Array that has been split up and displays the pagination Buttons on the page.
+ * @param paginatedArray
+ * @returns {Promise<void>}
  */
-function sendToSearchAndFilter(template, userInfo) {
-    let userArray = []
-    userInfo.data.forEach(function (scoreUser) {
-        userArray.push(scoreUser)
-    })
-    searchAndFilter(template, userArray)
+async function displayPageBtns(paginatedArray) {
+    let pages = Array.from(paginatedArray.keys()).map(page => ({pageNumber: page + 1}));
+    let buttonsTemplate = await getTemplateAjax('js/templates/paginationButtons.hbs');
+    let template = Handlebars.compile(buttonsTemplate);
+    document.querySelector('.tableFoot').innerHTML = template({pages});
 }
 
 /**
