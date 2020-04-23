@@ -24,6 +24,7 @@
     <script src="js/filterFunctions.js" defer></script>
     <script src="js/searchAndFilter.js" defer></script>
     <script src="js/displayHideGraph.js" defer></script>
+    <script src="js/displayPageButtons.js" defer></script>
     <script src="js/handlebarsScoreTable.js" defer></script>
     <script src="js/modal.js" defer></script>
     <script src="js/questionCount.js" defer></script>
@@ -36,7 +37,6 @@
     <script src="js/ajaxResponseCheck.js" defer></script>
     <title>Admin Page</title>
 </head>
-
 <body>
     <!-- Modal -->
     <div class="overlay"></div>
@@ -110,6 +110,7 @@
                         </thead>
                         <tbody class="tableList user-table score_list"></tbody>
                     </table>
+                    <div class="pageSelectors"></div>
                     <div class="show-graph hidden">
                         <canvas id="myChart" width="100" height="100"></canvas>
                     </div>
