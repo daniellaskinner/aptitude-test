@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.29)
 # Database: aptitude-test
-# Generation Time: 2020-04-24 09:59:31 +0000
+# Generation Time: 2020-04-24 10:32:17 +0000
 # ************************************************************
 
 
@@ -204,16 +204,16 @@ VALUES
 	(1,'hello@mayden.academy','Admin','2019-10-19 14:43:43',1,0,0,1,0),
 	(2,'test@test.co.uk','t2est','2020-04-23 16:18:32',0,1,1800,3,0),
 	(3,'test2@test.com','test','2020-04-24 09:54:08',0,1,1800,4,0),
-	(4,'op@op.com','opopo','2020-04-24 09:54:15',0,1,1800,3,0),
-	(5,'rtst@rtgs2.com','test hghv','2020-04-24 09:54:03',0,0,1800,2,0),
-	(6,'rtst@rtgs.com','test','2020-04-24 09:54:06',0,1,1800,2,0),
+	(4,'op@op.com','opopo','2020-04-24 10:06:03',0,1,1800,4,0),
+	(5,'rtst@rtgs2.com','test hghv','2020-04-24 10:12:49',0,0,1800,2,0),
+	(6,'rtst@rtgs.com','test','2020-04-24 10:12:50',0,1,1800,2,0),
 	(7,'rtst@rtgs.com','test','2019-10-19 13:13:12',0,1,1800,1,0),
-	(8,'rtst@rtgs.com','test','2020-04-24 09:56:03',0,1,1800,1,0),
+	(8,'rtst@rtgs.com','test','2020-04-24 10:04:53',0,1,1800,2,0),
 	(9,'test@test.com','example','2020-04-24 09:54:01',0,1,2040,1,0),
-	(10,'test2@test.com','test 2 edited','2019-10-19 15:03:29',0,0,2880,1,0),
-	(11,'anton@example.com','Antonio','2020-04-22 12:45:54',0,1,1800,2,0),
-	(12,'notmyactualemail@decoy.com','Alex','2020-04-23 12:38:46',0,0,1800,2,0),
-	(13,'notmyactualemail@decoy.com','Alex','2020-04-22 09:51:06',0,1,1800,2,0);
+	(10,'test2@test.com','test 2 edited','2020-04-24 10:06:38',0,0,2880,1,0),
+	(11,'anton@example.com','Antonio','2020-04-24 10:12:51',0,1,1800,2,0),
+	(12,'notmyactualemail@decoy.com','Alex','2020-04-24 10:12:52',0,0,1800,2,0),
+	(13,'notmyactualemail@decoy.com','Alex','2020-04-24 10:12:54',0,1,1800,2,0);
 
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
